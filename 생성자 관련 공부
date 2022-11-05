@@ -1,1 +1,101 @@
-이곳에는 생성자에 대한 글을 올릴 예정입니다
+ 생성자(Constructor)
+ 생성자는 new 연산자를 통해서 인스턴스를 생성할 때 반드시 호출이 되고 제일 먼저 실행되는 일종의 메소드(하지만 메소드와는 다르다.)이다. 생성자는 인스턴스 변수(필드 값 등)를 초기화 시키는 역할을 한다. 
+생성자 선언 방법
+
+ 생성자를 선언하는 방법은 위에 내용과 같다. 클래스라는 부분은 생성자를 정의하는 클래스의 이름과 동일하게 적어줘야 한다. 빨간색으로 표시한 부분은 필수로 적어야 하는 내용은 아니다. public에 대한 내용은 나중에 다룰 예정이고 우선은 생성자를 선언할 때는 public을 적어주면 된다.
+생성자 종류 및 사용
+ 위에서 생성자 선언하는 방법을 알아보았다. 인스턴스를 생성할 때 반드시 생성자를 호출한다고 하였다. 그런데 지금까지는 생성자를 정의하지 않았는데 어떻게 호출이 된 것일까? 그 이유는 클래스를 정의할 때 생성자를 생략하면 컴파일러가 자동적으로 기본 생성자(Default Constructor)를 생성하여 주기 때문이다. Default 생성자란 "public 클래스(){ }"를 의미한다. 소스 코드를 통해서 알아보자.
+
+
+public class ConstructorEx01 {
+//	public ConstructorEx01(){ } // Default Constructor 자동 생성
+	
+	public static void main(String[] args) {
+		ConstructorEx01 ce = new ConstructorEx01(); // 인스턴스 생성 및 생성자 호출
+	}
+}
+
+위의 내용처럼 인스턴스를 생성할 때 생성자를 호출한다. 생성자를 생략하면 주석 처리된 부분이 자동으로 생성된다. 이번에는 기본 생성자를 직접 정의하는 내용을 알아보자.
+
+public class ConstructorEx01 {
+	public ConstructorEx01(){ 
+		System.out.println("생성자 호출 성공");
+	}
+	
+	public static void main(String[] args) {
+		ConstructorEx01 ce = new ConstructorEx01(); // 인스턴스 생성 및 생성자 호출
+	}
+}
+
+ 처음 예제와 비교하면 생성자를 직접 정의하였고 생성자 내부에 소스코드 한 줄을 추가하였다. 결과는 "생성자 호출 성공"이 출력된다.
+
+ 생성자를 선언할 때 매개변수를 괄호 안에 가질 수 있다고 하였고 그것에 대한 예제를 살펴보자.
+public class ConstructorEx02 {
+	public ConstructorEx02(String a){ // a = 사용자 정의
+		System.out.println(a + " 생성자 호출 성공");
+	}
+	
+	public static void main(String[] args) {
+		ConstructorEx02 ce = new ConstructorEx02("사용자 정의"); // 매개변수를 갖는 생성자 호출
+//		ConstructorEx02 ce2 = new ConstructorEx02(); // 컴파일 에러
+	}
+}
+ 
+ 
+ 매개변수를 갖는 생성자를 정의하였고 main 메소드에서 생성자를 호출하였다. 결과는 "사용자 정의 생성자 호출 성공"이 출력된다. 그다음 줄의 주석 처리된 부분은 기본 생성자를 호출하지만 컴파일 에러가 발생된다. 그 이유는 사용자가 정의한 생성자가 있어서 Default 생성자를 더 이상 자동으로 만들어주지 않기 때문이다. 컴파일 에러를 해결하려면 아래와 같이 작성하면 된다.
+
+
+public class ConstructorEx03 {
+	public ConstructorEx03(){
+		System.out.println("생성자 호출 성공");
+	}
+	public ConstructorEx03(String a){ // a = 사용자 정의
+		System.out.println(a + " 생성자 호출 성공");
+	}
+	
+	public static void main(String[] args) {
+		ConstructorEx03 ce = new ConstructorEx03("사용자 정의"); // 매개변수를 갖는 생성자 호출
+		ConstructorEx03 ce2 = new ConstructorEx03(); // 기본 생성자 호출
+	}
+}
+
+기본 생성자를 추가하였고 정상적으로 결과가 출력된다. 참고로 생성자의 매개변수를 다르게 지정하여 정의하는 것을 생성자 오버로딩이라고 한다.(오버로딩에 관한 내용은 별도 포스팅 참고)
+
+ 생성자의 역할은 인스턴스를 초기화 시킨다고 하였는데 무엇을 의미하는지 소스코드를 통해 알아보자.
+
+
+class CalculatorEx {
+	// 필드변수 선언
+	int a;
+	int b;
+
+	public CalculatorEx() { // 기본 생성자
+		// 필드변수 초기화
+		a = 10;
+		b = 20;
+	}
+
+	public CalculatorEx(int num1, int num2) { // 생성자 오버로딩
+		// 매개값 이용 필드변수 초기화
+		a = num1;
+		b = num2;
+	}
+
+	public void sum() { // 메소드
+		System.out.println("합계 : " + (a + b));
+	}
+}
+
+public class ConstructorEx04 {
+	public static void main(String[] args) {
+		CalculatorEx cc = new CalculatorEx();
+		cc.sum(); // 결과 : 30
+		CalculatorEx cc2 = new CalculatorEx(0, 10);
+		cc2.sum(); // 결과 : 10
+	}
+}
+ 별도의 클래스를 하나 정의하였고 필드변수(int a, int b)를 선언하였다. 기본 생성자와 매개변수를 갖는 생성자를 정의하고 메소드에서 합을 구하는 코드를 추가하였다. main 메소드에서 인스턴스를 생성하면서 생성자를 호출하였고 호출된 생성자에 의해 필드변수가 초기화되었다. 그리고 인스턴스로 메소드를 호출하여 값을 출력한다. 
+생성자의 특징(메소드와의 차이)
+ 앞에서 설명한 것처럼 생성자는 반드시 클래스명과 동일하게 정의하여야 한다. 생성자 앞에는 접근 제어자(public 등)만 올수 있다.(메소드는 static과 같은 수식어를 작성할 수 있다.) 반환값이 없으므로 void나 자료형을 작성할 수 없다.(메소드는 void나 자료형이 있어야 한다.) 
+
+
