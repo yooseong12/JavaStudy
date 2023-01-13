@@ -10,3 +10,5 @@ https://velog.io/@yooseong12/Java-%EC%9E%90%EB%B0%94%EC%9D%98-%ED%8A%B9%EC%A7%95
 ##JVM이란?
 https://velog.io/@yooseong12/Java-JVM%EC%9D%B4%EB%9E%80
 
+##분변객체란?
+https://velog.io/@yooseong12/Java-%EB%B6%88%EB%B3%80%EA%B0%9D%EC%B2%B4%EB%9E%80
