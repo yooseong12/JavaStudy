@@ -12,3 +12,6 @@ https://velog.io/@yooseong12/Java-JVM%EC%9D%B4%EB%9E%80
 
 ##불변객체란?
 https://velog.io/@yooseong12/Java-%EB%B6%88%EB%B3%80%EA%B0%9D%EC%B2%B4%EB%9E%80
+
+##싱글톤패턴이란?
+https://velog.io/@yooseong12/Java-%EC%8B%B1%EA%B8%80%ED%86%A4-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80
