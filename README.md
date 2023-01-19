@@ -15,3 +15,6 @@ https://velog.io/@yooseong12/Java-%EB%B6%88%EB%B3%80%EA%B0%9D%EC%B2%B4%EB%9E%80
 
 ##싱글톤패턴이란?
 https://velog.io/@yooseong12/Java-%EC%8B%B1%EA%B8%80%ED%86%A4-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80
+
+##객체지향의 5원칙이란?
+https://velog.io/@yooseong12/Java-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-5%EC%9B%90%EC%B9%99SOLID
