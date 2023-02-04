@@ -20,6 +20,13 @@
 ### 객체지향의 5원칙이란? 
 -  [https://velog.io/@yooseong12/Java-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-5%EC%9B%90%EC%B9%99SOLID](https://velog.io/@yooseong12/Java-%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9D%98-5%EC%9B%90%EC%B9%99SOLID)
 
+### 컬렉션 프레임워크(Collection Framework)
+- https://velog.io/@yooseong12/Java-%EC%BB%AC%EB%A0%89%EC%85%98-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%ACCollection-Framework
+
 
 ## 네트워크
+### CORS란?
 - https://yooseong12.tistory.com/44
+
+### HTTP 와 HTTPS란?
+- https://yooseong12.tistory.com/45
