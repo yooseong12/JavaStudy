@@ -34,3 +34,7 @@
 ## 데이터베이스
 ### 데이터의 정규화란?
 - https://velog.io/@yooseong12/%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98-%EC%A0%95%EA%B7%9C%ED%99%94
+
+## 배포
+### CI/CD란? 무중단 배포란?
+- https://yooseong12.tistory.com/46
